@@ -1,14 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
-import "./index.css";
+import {CancelOrderWidget} from "./components/CancelOrderWidget";
+import {createRoot} from "react-dom/client";
 
 const App = () => (
-  <div className="container">
-    <div>Name: cancel-order</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Empty CSS</div>
-  </div>
+    <CancelOrderWidget orderId={123} />
 );
-ReactDOM.render(<App />, document.getElementById("app"));
+
+createRoot(document.getElementById("app")!).render(<App />);

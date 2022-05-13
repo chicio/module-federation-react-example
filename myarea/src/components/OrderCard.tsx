@@ -16,9 +16,6 @@ export const OrderCard: FC<Props> = ({ order }) =>
             alt="green iguana"
         />
         <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-
-            </Typography>
             <Typography variant="h5" color="text.primary">
                 {order.departure} to {order.destination} - {order.date}
             </Typography>
