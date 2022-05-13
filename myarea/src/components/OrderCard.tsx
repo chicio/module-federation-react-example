@@ -1,6 +1,7 @@
 import React, {FC} from "react";
 import {Button, Card, CardActions, CardContent, CardMedia, Typography} from "@mui/material";
 import {Order} from "../logic/OrderRepository";
+import {Link} from "react-router-dom";
 
 interface Props {
     order: Order
@@ -23,6 +24,6 @@ export const OrderCard: FC<Props> = ({ order }) =>
             </Typography>
         </CardContent>
         <CardActions>
-            <Button size="small" variant={'contained'} color={'error'}>Cancel</Button>
+            <Button component={Link} to={`/${order.id}/cancel`} size="small" variant={'contained'} color={'error'}>Cancel</Button>
         </CardActions>
     </Card>
