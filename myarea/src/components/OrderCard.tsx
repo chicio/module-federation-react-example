@@ -18,8 +18,8 @@ export const OrderCard: FC<Props> = ({ order }) =>
             <Typography gutterBottom variant="h5" component="div">
 
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-                {order.departure} {order.destination} - {order.date}
+            <Typography variant="h5" color="text.primary">
+                {order.departure} to {order.destination} - {order.date}
             </Typography>
         </CardContent>
         <CardActions>
