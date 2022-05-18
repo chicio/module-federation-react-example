@@ -14,7 +14,6 @@
     "react/react-in-jsx-scope": "off"
   },
   "overrides": [
-    // Override some TypeScript rules just for .js files
     {
       "files": ["*.js"],
       "rules": {

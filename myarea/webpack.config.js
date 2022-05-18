@@ -36,7 +36,9 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "myarea",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        "cancel-order": "cancelOrderWidget@http://localhost:3001/remoteEntry.js"
+      },
       exposes: {},
       shared: {
         ...deps,

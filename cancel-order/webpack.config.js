@@ -41,10 +41,12 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "cancel_order",
+      name: "cancelOrderWidget",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./CancelOrderWidget": "./src/components/CancelOrderWidget"
+      },
       shared: {
         ...deps,
         react: {

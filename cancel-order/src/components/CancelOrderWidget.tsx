@@ -10,8 +10,12 @@ import {
     Typography
 } from "@mui/material";
 
-export const CancelOrderWidget: FC = () => {
-    const [disable, setDisable] = useState<Boolean>(true);
+interface Props {
+    orderId: number;
+}
+
+export const CancelOrderWidget: FC<Props> = ({ orderId }) => {
+    const [disable, setDisable] = useState<boolean>(true);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setDisable(event.target.value === "no");
@@ -19,7 +23,7 @@ export const CancelOrderWidget: FC = () => {
 
     return <Container sx={{my: 3}}>
         <Typography variant="h3" color="text.primary">
-            Do you really want to cancel your order?
+            {`Do you really want to cancel order ${orderId}?`}
         </Typography>
         <FormControl sx={{my: 3}}>
             <RadioGroup defaultValue={"no"} onChange={handleChange}>
