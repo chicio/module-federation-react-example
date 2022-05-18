@@ -1,3 +1,19 @@
-import {FC} from "react";
+import React, {FC} from "react";
+import {useParams, useSearchParams} from "react-router-dom";
 
-export const CancelOrderPage: FC = () => <>Ciao!!</>
+const CancelOrderWidget = React.lazy(() => import("cancel-order/CancelOrderWidget"));
+
+type UrlParams = {
+    orderId: string;
+}
+
+export const CancelOrderPage: FC = () => {
+    const { orderId } = useParams<UrlParams>();
+
+    return (
+        <React.Suspense fallback={<div/>}>
+            <CancelOrderWidget
+                orderId={orderId}/>
+        </React.Suspense>
+    );
+}

@@ -11,10 +11,10 @@ import {
 } from "@mui/material";
 
 interface Props {
-    orderId: number;
+    orderId: string;
 }
 
-export const CancelOrderWidget: FC<Props> = ({ orderId }) => {
+const CancelOrderWidget: FC<Props> = ({ orderId }) => {
     const [disable, setDisable] = useState<boolean>(true);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -35,3 +35,4 @@ export const CancelOrderWidget: FC<Props> = ({ orderId }) => {
     </Container>;
 }
 
+export default CancelOrderWidget;
