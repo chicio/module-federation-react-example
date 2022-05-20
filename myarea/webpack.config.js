@@ -1,10 +1,11 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const ExternalTemplateRemotesPlugin = require("external-remotes-plugin");
 
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3000/",
+    publicPath: "http://localhost:3000/"
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
@@ -35,11 +36,9 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "myarea",
-      filename: "remoteEntry.js",
       remotes: {
-        "cancel-order": "cancelOrderWidget@http://localhost:3001/remoteEntry.js"
+        cancelOrder: 'cancelOrderWidget@[widgets.cancellationOrderWidgetUrl]/remoteEntry.js'
       },
-      exposes: {},
       shared: {
         ...deps,
         react: {
@@ -52,6 +51,7 @@ module.exports = {
         },
       },
     }),
+    new ExternalTemplateRemotesPlugin(),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
     }),

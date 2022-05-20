@@ -1,7 +1,7 @@
 import React, {FC} from "react";
 import {useParams} from "react-router-dom";
 
-const CancelOrderWidget = React.lazy(() => import("cancel-order/CancelOrderWidget"));
+const CancelOrderWidget = React.lazy(() => import("cancelOrder/CancelOrderWidget"));
 
 type UrlParams = {
     orderId: string;
