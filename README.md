@@ -1,4 +1,4 @@
-# Custom module Jackson
+# Module Federation React Example
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/chicio/module-federation-react-example/main/LICENSE.md)
 
