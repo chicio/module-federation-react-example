@@ -1,0 +1,10 @@
+{
+  "name": "module-federation-react-example",
+  "version": "1.0.0",
+  "devDependencies": {
+    "concurrently": "^7.2.0"
+  },
+  "scripts": {
+    "start": "concurrently \"cd cancel-order; npm start\" \"cd myarea; npm start\""
+  }
+}
