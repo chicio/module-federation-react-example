@@ -1,6 +1,12 @@
 {
   "name": "module-federation-react-example",
   "version": "1.0.0",
+  "workspaces": {
+    "packages": [
+      "cancel-order",
+      "myarea"
+    ]
+  },
   "devDependencies": {
     "concurrently": "^7.2.0"
   },
