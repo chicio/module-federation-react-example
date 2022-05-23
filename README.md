@@ -22,7 +22,7 @@ Click [here](TO BE DEFINED) to read the post.
 
 ### Try it!
 
-To try the example contained in this repository you just need to ru the following commands from the root folder.
+To try the example contained in this repository you just need to run the following commands from the root folder.
 
 ```bash
 npm install
