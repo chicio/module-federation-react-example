@@ -43,7 +43,6 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "cancelOrderWidget",
       filename: "remoteEntry.js",
-      remotes: {},
       exposes: {
         "./CancelOrderWidget": "./src/components/CancelOrderWidget"
       },

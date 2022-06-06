@@ -1,7 +1,7 @@
 export const loadConfiguration = async () => {
     try {
-        const modulesResponse = await fetch('/api/widgets');
-        window.widgets = await modulesResponse.json();
+        const widgetsResponse = await fetch('/api/widgets');
+        window.widgets = await widgetsResponse.json();
     } catch (e) {
         console.error('Error retrieving modules configuration', e);
     }
