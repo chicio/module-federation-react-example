@@ -12,7 +12,7 @@ The app is composed by:
 * myarea: the main host app that let a user see his/her orders
 * cancel-order: a widget app that let the user delete an order
 
-The cancel-order widget is loaded into the host app using Webpack Module Federation, by loading a widget from a remote url received as dynamic configuration from remote service. This is an app create for my blog post ["Create a microfrontend app using module federation and dynamic configuration"](https://www.fabrizioduroni.it/2022/06/06/microfrontend-module-federation-dynamic-configuration/). Below you can find a quote from the article.  
+The cancel-order widget is loaded into the host app using Webpack Module Federation, by loading a widget from a remote url received as dynamic configuration from a remote service. This is an app create for my blog post ["Create a microfrontend app using module federation and dynamic configuration"](https://www.fabrizioduroni.it/2022/06/06/microfrontend-module-federation-dynamic-configuration/). Below you can find a quote from the article.  
 
 > ...There are various way to achive the microfrontend architecture, that usually require a lot of custom work/development and/or the usage of specific frameworks (eg. [single-spa](https://github.com/single-spa/single-spa "single-spa") etc.). With the release of Webpack 5 there is a new game-changer player in the microfrontend world: Module Federation...
 
