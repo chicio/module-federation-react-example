@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, Suspense} from "react";
 import {useParams} from "react-router-dom";
 
 const CancelOrderWidget = React.lazy(() => import("cancelOrder/CancelOrderWidget"));
@@ -11,9 +11,9 @@ export const CancelOrderPage: FC = () => {
     const { orderId } = useParams<UrlParams>();
 
     return (
-        <React.Suspense fallback={<div/>}>
+        <Suspense fallback={<div/>}>
             <CancelOrderWidget
                 orderId={orderId ?? ""}/>
-        </React.Suspense>
+        </Suspense>
     );
 }
